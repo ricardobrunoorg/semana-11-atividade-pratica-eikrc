@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-white p-3">
+
+    <div class="container" style="max-width: 500px;">
+        <a href="index.html" class="btn btn-sm btn-link ps-0 text-decoration-none text-danger">← Voltar</a>
+
+        <div id="card-detalhe" style="display: none;">
+            <h2 class="fw-bold m-0 text-dark" id="item-nome"></h2>
+            <span class="badge bg-danger my-2" id="item-categoria"></span>
+            <p class="text-muted" id="item-descricao"></p>
+            <h4 class="text-danger fw-bold" id="item-preco"></h4>
+            <button class="btn btn-danger w-100 mt-2" onclick="alert('Comprado!')">Comprar</button>
+        </div>
+
+        <p class="text-danger fw-bold" id="erro-alerta" style="display: none;">Não encontrado.</p>
+    </div>
+
+    <script>
+        const dadosItens = [
+            {"id": 0, "nome": "Kindle", "preco": "R$ 699,90", "categoria": "Smartphones", "descricao": "Usado para ler."},
+            {"id": 1, "nome": "Bicicleta", "preco": "R$ 4.599,00", "categoria": "Veiculos", "descricao": "Usado para andar."},
+            {"id": 2, "nome": "Raquete", "preco": "R$ 199,89", "categoria": "Esportes", "descricao": "Raquete para praticar esportes."},
+            {"id": 3, "nome": "Fiat Strada", "preco": "R$ 98.999,99", "categoria": "Veiculos", "descricao": "Veiculo motorizado para uso cotidiano."}
+        ];
+
+        const id = new URLSearchParams(window.location.search).get('id');
+        const item = dadosItens[id];
+
+        if (item) {
+            document.getElementById('item-nome').innerText = item.nome;
+            document.getElementById('item-categoria').innerText = item.categoria;
+            document.getElementById('item-descricao').innerText = item.descricao;
+            document.getElementById('item-preco').innerText = item.preco;
+            document.getElementById('card-detalhe').style.display = 'block';
+        } else {
+            document.getElementById('erro-alerta').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

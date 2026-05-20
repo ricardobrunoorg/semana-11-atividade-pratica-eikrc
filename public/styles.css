@@ -1,0 +1,57 @@
+.flex-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Titulo{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: flex-start;
+    margin-right: 400px;
+}
+
+.holder{
+    background-color: rgb(173, 173, 173);
+    height: 110vh;
+    border-color: rgb(95, 95, 95);
+    border-style: solid;
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    margin: 20px;
+    background-color: white;
+    width: 275px;
+    height: 275px;
+    border-color: crimson;
+    border-style: solid;
+    border-width: 3px;
+    position: relative;
+}
+
+.img_config{
+    height: 200px;
+    width: 250px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.font_config{
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.botao_pos{
+    position: relative;
+    top: -20px;
+    right: -10px;
+}
